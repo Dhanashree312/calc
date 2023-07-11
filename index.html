@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calculator design</title>
+</head>
+<style>
+    .cal{
+        width: 300px;
+        background-color: slategray;
+        margin: auto;
+        border-radius: 30px 30px 70px 70px;
+        padding: 15px;
+        box-shadow: 3px 3px 3px 3px black;
+    }
+    .brand{
+        font-family: monospace;
+        font-size: 15px;
+        margin-bottom: 0%;
+    }
+    .small-scr{
+        margin-top: 0%;
+        margin-left:210px;
+        display: flex;
+        border-radius: 10px;
+    }
+    .box{
+        background-color: rgb(9, 89, 44);
+        height: 25px;
+        width:20px;
+        border:  1px solid silver;
+    }
+    .main-screen{
+        height: 70px;
+        width: 290px;
+        background-color: #40bf80;
+        margin-top: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    .top-btn{
+        background-color: darkslategray;
+        height:30px;
+        width:30px;
+        border-radius: 50px 20px 20px 50px;
+        margin-left: 17px;
+    }
+    .word{
+        display: inline-block;
+    }
+    .a-word{
+        font-size: 10px;
+        margin-bottom: 2px;
+        margin-left: 10px;
+    }
+    .b-word{
+        font-size: 10px; 
+        margin-left: 15px;  
+    }
+    .c-word{
+    font-size: 10px;
+    margin-left: 90px;  
+    }
+    .d-word{
+        font-size: 10px;
+       margin-left:15px;
+    }
+    .Replay-btn{
+        border-radius: 50%;
+        height:70px;
+        width: 70px;
+       margin-left: 17px;
+        background-color: darkslategray;
+        font-size: 10px;
+    }
+    .shift{
+        margin-left: 10px;
+    }
+    .mid-btn{
+        height:30px;
+        width: 40px;
+        font-size: 10px;
+        color: white;
+        background-color:  darkslategray;
+        padding: 0;
+        border-radius:4px 4px 10px 10px ;
+        margin-left: 5px;
+        margin-top: 7px;
+    }
+    .low-btn{
+        height: 40px;
+        width:40px;
+        padding: 0;
+        border-radius:4px 4px 10px 10px ;
+        margin-left: 17px;
+        margin-top: 15px;
+    }
+    .btn7{
+        margin-left: 5px;
+    }
+    .btn4{
+        margin-left: 5px;
+    }
+    .btn1{
+        margin-left: 5px;
+    }
+    .btn0{
+        margin-left: 5px;
+        margin-bottom: 15px;
+    }
+    .btn-dot{
+        margin-bottom: 15px;
+    }
+    .btn-x10{
+        margin-bottom: 15px;
+    }
+    .btn-Ans{
+        margin-bottom: 15px;
+    }
+    .btn-equal{
+        margin-bottom: 15px;
+    }
+    .top-btn:hover{
+        background-color: rgb(11, 16, 16);
+    }
+    .mid-btn:hover{
+        background-color: rgb(11, 16, 16);
+    }
+    .low-btn:hover{
+        background-color: rgb(155, 90, 90);
+    }
+</style>
+<body>
+    <div class="cal">
+        <p class="brand">RTC</p>
+        <div class="small-scr">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <input type="text" class="main-screen">
+        <p class="word a-word">SHIFT</p>
+        <p class="word b-word">ALPHA</p>
+        <p class="word c-word">SETUP MODE</p>
+        <p class="word d-word">ON</p>
+        <button class="top-btn shift"></button>
+        <button class="top-btn alpha"></button>
+        <button class="Replay-btn replay">Replay</button>
+        <button class="top-btn setup-mode"></button>
+        <button class="top-btn on"></button>
+
+        <button class="mid-btn">CALC</button>
+        <button class="mid-btn">x</button>
+        <button class="mid-btn">log[]</button>
+        <button class="mid-btn">In</button>
+        <button class="mid-btn">(-)</button>
+        <button class="mid-btn">.'"</button>
+
+        <button class="mid-btn">/</button>
+        <button class="mid-btn">^</button>
+        <button class="mid-btn">hyp</button>
+        <button class="mid-btn">sin</button>
+        <button class="mid-btn">cos</button>
+        <button class="mid-btn">tan</button>
+
+        <button class="mid-btn">RCL</button>
+        <button class="mid-btn">ENG</button>
+        <button class="mid-btn">(</button>
+        <button class="mid-btn">)</button>
+        <button class="mid-btn">S<=>D</button>
+        <button class="mid-btn">M+</button>
+
+        <button class="low-btn btn7">7</button>
+        <button class="low-btn btn8">8</button>
+        <button class="low-btn btn9">9</button>
+        <button class="low-btn btn-del">DEL</button>
+        <button class="low-btn btn-AC">AC</button>
+
+        <button class="low-btn btn4">4</button>
+        <button class="low-btn btn5">5</button>
+        <button class="low-btn btn6">6</button>
+        <button class="low-btn btnX">*</button>
+        <button class="low-btn btn%">%</button>
+
+        <button class="low-btn btn1">1</button>
+        <button class="low-btn btn2">2</button>
+        <button class="low-btn btn3">3</button>
+        <button class="low-btn btn+">+</button>
+        <button class="low-btn btn-">-</button>
+
+        <button class="low-btn btn0">0</button>
+        <button class="low-btn btn-dot">.</button>
+        <button class="low-btn btn-x10">x10</button>
+        <button class="low-btn btn-Ans">Ans</button>
+        <button class="low-btn btn-equal">=</button>
+    </div>
+</body>
+</html>
